@@ -1,0 +1,73 @@
+03/08/2026
+Aula 01 - Introdução ao curso
+
+PLANO DO CURSO:
+1 - Entrada de Dados com Python e PHP, Gerar arquivos tipo CSV, PDF e XLS.
+2 - Introdução ao Banco de Dados XBase. SQL (comandos essenciais e técnicas avançadas, processos
+de criação de views, procedures, functions, triggers e gestão de privilégios de usuários);
+3 - Estratégias de otimização, configurações de servidor, estratégias de backup;
+4 - Monitoramento de bancos de dados;
+5 - Processos de ETL;
+6 - Introdução a novos tipos de bancos de dados (orientados a documentos, grafos e colunar).
+7- Tópicos Pedagógicos – Pensamento Computacional, Mente Criaativa, Filosofia da Educação.
+
+(A 1ª aula será python, a  2ª PHP e a 3ª juntará os dois)
+
+3 leis da informática:
+    faça backup
+    verifique se o backup está feito
+    complique tudo que puder
+
+10/08/2026
+Aula 02 - Aula Entrada de Dados
+
+- A entrada de dados já foi o "calcanhar de aquiles" da computação.
+
+- Acessar IDLE do python para testar comandos
+
+- Só é banco de dados se houver um SGBD
+
+- Padrão de dados: csv, xls, pdf
+
+17/08/2026
+Aula 03 - ???????
+
+Comentários do vídeo da Vanessa:
+    - Profissão DBA foi dissolvida
+    - power bi faz mais que SQL
+    - aplicar Pandas no ambiente corporativo
+    - fazer curso SAP
+    - se candidatar para processos seletivos da totvs (abre todo final do ano)
+
+M.V.C. - model, view, controller:
+    - Há um botao de "gravar", que muda para "aguardando" ao ser clicado
+    - Isso mostra o controller afetando a view
+
+C.R.U.D. - ?????:
+    - 
+
+Bootstrap:
+
+O "responsivo":
+    Exibição dinâmica dos dados sem precisar programar?
+    
+    Ao alterar o tamanho da janela, a exibição dos dados ñ é prejudicada,
+    Pois, automaticamente, o sistema ajusta o tamanho da fonte,
+    e a organização da janela
+
+    Programar uma interface responsiva na mão daria mto trabalho, já o
+    bootstrap resolve isso.
+
+    Ele adapta a exibição para qualquer dispositivo (pc, mobile...)
+
+Aplicações em D.O.S. (Lê se deóesse) ou sistema operacional de disco
+
+Revisão script ler dados, gravar dados em arquivos
+
+TEMA DE HOJE: usar funções em python (ele só deu revisao de i.o, escrever)
+
+Próx aula será SQLite
+
+
+
+
