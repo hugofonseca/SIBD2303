@@ -68,6 +68,30 @@ TEMA DE HOJE: usar funções em python (ele só deu revisao de i.o, escrever)
 
 Próx aula será SQLite
 
+24/08/2026
+Aula 04 - ???????
 
+Revisão nomenclatura de tabelas relacionais
+
+Exemplo abaixo tabela users gerêrica
+
+users:
+    (pk)id_users
+    (unique)cod_user
+    user
+    (unique)email
+    celular
+    user_log
+    datahora_log
+    (index)grupo
+    senha
+
+
+Observações de segurança:
+    Incluir atributos "secretos" na tabela users:
+        userlog grava as ações do usuário
+        datahoralog grava quando o user alterou algo
+        grupo distingue [usuário, cliente, editor, none]
+        senha criptografada na tabela
 
 
