@@ -24,15 +24,18 @@ def GravarDados(nome, telefone):
         cursor.execute(sql_criar_tabela)
         print("create bem sucedido")
         #inserir registro
-        sql_inserir="INSERT INTO clientes (nome, telefone) VALUES ('"+nome+"','"+telefone+"')"
-        conexao.execute(sql_inserir)
+        sql_inserir="""INSERT INTO clientes (nome, telefone)
+        VALUES (?, ?)"""
+        cursor.execute(sql_inserir, (nome, telefone))
         # pesquisar pra que serve o commit, situação rollback cartao nao passa ao realizar compra online
+        print("Linhas afetadas:", cursor.rowcount)
         conexao.commit()
         # fechar conexão
+        cursor.execute("SELECT COUNT(*) FROM clientes")
+        print("Total:", cursor.fetchone()[0])
         conexao.close()
-        print("insert bem sucedido")
     except sqlite3.Error as e:
-        print("erro de dados, verifique")
+        print("Erro:",e)
 
 def ImprimirTabela():
     try:
@@ -50,16 +53,17 @@ def ImprimirTabela():
         """
         #executar cursor
         cursor.execute(sql_criar_tabela)
-        #inserir registro
-        sql_imprimir="SELECT * FROM clientes"
-        conexao.execute(sql_imprimir)
         #ler os registros retornados
+        sql_imprimir="SELECT * FROM clientes"
+        cursor.execute(sql_imprimir)
+        print("select deu certo")
         registros = cursor.fetchall()
-        # garantir que tudo vai ser executado
-        conexao.commit()
+        print("\n--- CLIENTES ---")
+        print("Quantidade:", len(registros))
+        for registro in registros:
+            print(f"ID: {registro[0]} | Nome: {registro[1]} | Telefone: {registro[2]}")
         # fechar conexão
         conexao.close()
-        print("select deu certo")
     except sqlite3.Error as e:
         print("erro de dados, verifique",e)
 
@@ -74,3 +78,5 @@ while sair != "S":
     sair = sair.upper()
     if (sair=="I"):
         ImprimirTabela()
+        sair = input("Sair S/N: ")
+        sair = sair.upper()
